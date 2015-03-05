@@ -1,5 +1,7 @@
 package es.urjc.ist.hash.main;
 
+import java.util.Iterator;
+
 import es.urjc.ist.hash.Hash;
 import es.urjc.ist.hash.Tupla;
 
@@ -51,5 +53,11 @@ public class Main {
 		imprimir(tabla, num_elementos);
 		
 		System.out.println("\n** tabla hash **\n" + tabla);
+		
+		// iteramos la tabla mediante un objeto iterador
+		Iterator<String> iterador = tabla.getIterator();		
+		while(iterador.hasNext()){
+			System.out.println("clave: " + iterador.next());			
+		}		
 	}
 }

@@ -10,8 +10,6 @@ public class TestIterators {
 
 	@Test
 	public void test() {
-
-		//fail("Not yet implemented");
 		
 		int tamanio = 10;
 		String elemento;
@@ -23,7 +21,7 @@ public class TestIterators {
 			array_n.insert(elemento);
 		}
 		
-		//System.out.println(array_n);
+		System.out.println(array_n);
 		
 		// probando iterador
 		Iterator<String> iterador = array_n.getIterator();
@@ -33,12 +31,16 @@ public class TestIterators {
 			System.out.println("extraido: '" + extraido + "'");
 		}
 		
-		
-		
+
 		Lista<String> lista = new Lista<String>();
 		
-		System.out.println(lista);
-		System.out.println("probando Iterador..\n");
+		for(int i = 0; i<tamanio-5; i++){
+			elemento = "elemento: " + String.valueOf(i);
+			lista.insert(elemento);
+		}
+		
+		System.out.println("\n" + lista);
+		System.out.println("probando Iterador Lista..");
 		Iterator<String> iterador_array = lista.getIterator();
 		String extraido;
 		
